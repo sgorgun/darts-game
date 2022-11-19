@@ -12,7 +12,24 @@ namespace DartsGame
         /// <returns>The earned points.</returns>
         public static int GetScore(double x, double y)
         {
-            throw new NotImplementedException("You need to implement this method.");
+            double r = Math.Sqrt((x * x) + (y * y));
+
+            if (r <= 1)
+            {
+                return 10;
+            }
+
+            if (r <= 5)
+            {
+                return 5;
+            }
+
+            if (r <= 10)
+            {
+                return 1;
+            }
+
+            return 0;
         }
     }
 }
